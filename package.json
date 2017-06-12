@@ -6,7 +6,7 @@
     "prod:build": "yarn rimraf lib dist && babel src -d lib --ignore .test.js && cross-env NODE_ENV=production webpack -p --progress",
     "prod:start": "cross-env NODE_ENV=production node lib/server",
     "heroku-postbuild": "yarn prod:build",
-    "ut": "jest --runInBand --forceExit",
+    "ut": "jest '\\.ut\\.js$' testMatch src",
     "e2e:ui": "nightwatch -e chrome",
     "e2e:server": "jest server/**/*.e2e.js --runInBand --forceExit",
     "lint": "eslint src/**/*.js webpack.config.babel.js",

@@ -24,7 +24,12 @@ cache:
   - node_modules
 
 script:
-- yarn lint && yarn flow && yarn ut && yarn prod:build && yarn e2e:server && yarn e2e:ui
+- yarn lint
+- yarn flow
+- yarn ut
+- yarn prod:build
+- yarn e2e:server
+- yarn start & sleep 5 && e2e:ui
 
 deploy:
   - provider: heroku
