@@ -1,0 +1,21 @@
+{
+  "parser": "babel-eslint",
+  "env": {
+    "jest": true,
+    "browser": true
+  },
+  "extends": [
+    "airbnb/base"
+  ],
+  "plugins": [
+    "flowtype"
+  ],
+  "settings": {},
+  "rules": {
+    "import/order": [2, {"newlines-between": "always"}],
+    "semi": [2, "never"],
+    "no-unexpected-multiline": 2,
+    "no-param-reassign": ["error", { "ignorePropertyModificationsFor": ["req"] }],
+    "no-underscore-dangle": [2, { "allow": ["_id"] }]
+  }
+}
